@@ -22,8 +22,6 @@ if __name__ == '__main__':
         for i in range(200):
             val = gen.generate_next() / 8
             for h in range(1, 10):
-                if val > h / 10:
-                    break
-                else:
+                if val <= h / 10:
                     hits[h - 1] += 1
         print(hits)
