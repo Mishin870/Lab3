@@ -19,9 +19,10 @@ if __name__ == '__main__':
     gen = RecurrentGenerator(1, 1, 8)
     for n in range(5):
         hits = [0 for x in range(9)]
-        for i in range(200):
+        for i in range(1000):
             val = gen.generate_next() / 8
             for h in range(1, 10):
                 if val <= h / 10:
                     hits[h - 1] += 1
+        print("Выборка {}: ".format(n + 1), end='')
         print(hits)
